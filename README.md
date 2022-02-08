@@ -3,14 +3,16 @@
 -composer create-project laravel/laravel
 -composer require laravel/sanctum
 
-//.env
--primeiro precisamos configurar o .env com o mysql
+- Banco de dados
+primeiro precisamos configurar o .env com o mysql
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
 DB_DATABASE=laravel
 DB_USERNAME=root
 DB_PASSWORD=
+nas migrations de "create_user_table" criaremos o type tipo enum para admin = 1 e user = 2 e status tipo boolean
+iremos rodar as migrations com "php artisan migrate"
 
 /******************* SANCTUM **********************/
 // app/Models/User.php
